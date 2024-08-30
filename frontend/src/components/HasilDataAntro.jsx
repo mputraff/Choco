@@ -3,8 +3,8 @@ import GrafikAntropometri from "../components/GrafikAntropometri";
 import Bayi from "../assets/img/Bayi.png";
 import Chart from "../chart/Piechart";
 import TabelStandar from "./TabelStandar";
-export default function HasilDataAntro() {
 
+export default function HasilDataAntro() {
   return (
     <div className="h-auto flex bg-slate-300 mx-10 rounded-xl my-10">
       <div className="w-full m-10 flex flex-col">
@@ -20,18 +20,9 @@ export default function HasilDataAntro() {
               <Chart />
             </div>
             <div className=" w-1/3 h-auto flex flex-col gap-5">
-              <GrafikAntropometri
-                kategori={"Nama Anak"}
-                data={"Citra"}
-              />
-              <GrafikAntropometri
-                kategori={"Berat Badan"}
-                data={"13 Kg"}
-              />
-              <GrafikAntropometri
-                kategori={"Tinggi Badan"}
-                data={"109 cm"}
-              />
+              <GrafikAntropometri kategori={"Nama Anak"} data={"Citra"} />
+              <GrafikAntropometri kategori={"Berat Badan"} data={"13 Kg"} />
+              <GrafikAntropometri kategori={"Tinggi Badan"} data={"109 cm"} />
               <GrafikAntropometri kategori={"Umur"} data={"7 Tahun"} />
             </div>
 
@@ -58,5 +49,5 @@ export default function HasilDataAntro() {
         </div>
       </div>
     </div>
-  )
+  );
 }

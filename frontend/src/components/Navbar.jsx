@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { DownOutlined } from '@ant-design/icons';
-import { Dropdown, Space } from 'antd';
+import { DownOutlined } from "@ant-design/icons";
+import { Dropdown, Space } from "antd";
 
 export default function Navbar() {
   const [dropdown, setDropdown] = useState(false);
   const [shopDropdown, setShopDropdown] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  
 
   const navigate = useNavigate();
 
@@ -30,17 +29,29 @@ export default function Navbar() {
   const handleLogout = () => {
     localStorage.removeItem("user"); // Hapus data user dari localStorage
     setIsLoggedIn(false); // Set status login menjadi false
-    navigate('/login'); // Arahkan ke halaman login
+    navigate("/login"); // Arahkan ke halaman login
   };
 
   const items = [
     {
-      label: <span><Link to={"/profile"}>Profile</Link></span>,
-      key: '1',
+      label: (
+        <span>
+          <Link to={"/profile"}>Profile</Link>
+        </span>
+      ),
+      key: "1",
+    },
+    {
+      label: (
+        <span>
+          <Link to={"/dashboard"}>Dashboard</Link>
+        </span>
+      ),
+      key: "2",
     },
     {
       label: <span onClick={handleLogout}>Logout</span>,
-      key: '2',
+      key: "3",
     },
   ];
 
@@ -51,7 +62,7 @@ export default function Navbar() {
   const handleShopDropdown = () => {
     setShopDropdown(!shopDropdown);
   };
-  
+
   return (
     <header className="w-full h-16 bg-slate-700">
       <nav className="w-full h-full flex items-center justify-between">
@@ -79,9 +90,7 @@ export default function Navbar() {
             </li>
             <li>
               {isLoggedIn ? (
-                <Dropdown
-                  menu={{ items }}
-                >
+                <Dropdown menu={{ items }}>
                   <a onClick={(e) => e.preventDefault()}>
                     <Space>
                       <i className="fa-solid fa-user"></i> Profile
@@ -116,7 +125,9 @@ export default function Navbar() {
 
       <div
         className={`max-sm:top-16 max-sm:absolute max-sm:bg-slate-700 max-sm:w-full max-sm:h-auto transition-all duration-500 ease-out transform ${
-          shopDropdown ? 'translate-y-0 opacity-100' : '-translate-y-4 opacity-0'
+          shopDropdown
+            ? "translate-y-0 opacity-100"
+            : "-translate-y-4 opacity-0"
         }`}
       >
         <ul className="max-sm:flex flex-col lg:hidden max-sm:mx-8 max-sm:my-2 max-sm:gap-4 text-white">

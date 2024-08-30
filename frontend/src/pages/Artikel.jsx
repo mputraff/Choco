@@ -3,7 +3,6 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Card from "../components/CardArtikel";
 import Search from "../components/Search";
-import { Link } from "react-router-dom";
 import PictArtikel1 from "../assets/img/artikel_1.jpg";
 import PictArtikel2 from "../assets/img/artikel_2.jpg";
 import PictArtikel4 from "../assets/img/artikel_4.jpg";

@@ -8,6 +8,8 @@ import Input from "../components/Input.jsx";
 import ButtonSign from "../components/ButtonSign.jsx";
 import Loading from "../components/Loading"; // Import Loading
 
+import { useAuth } from "../hooks/useAuth.jsx";
+
 export default function Login() {
   const [SignInOrSignUp, setSignInOrSignUp] = useState("Sign In");
   const [email, setEmail] = useState("");
@@ -15,8 +17,9 @@ export default function Login() {
   const [name, setName] = useState("");
   const [handphone_number, setPhone] = useState("");
   const [isLoading, setIsLoading] = useState(false); // State untuk Loading
-  
 
+  const { login } = useAuth();
+  
   const navigate = useNavigate();
   
   const handleClickSignInorSignUp = (name) => {
@@ -53,10 +56,14 @@ export default function Login() {
         email,
         password,
       });
+
+      // console.log(response.data.data);
+
+      login(response.data.data);
     
       setIsLoading(true); // Tampilkan loading saat login berhasil
 
-      window.localStorage.setItem("user", JSON.stringify(response.data.user))
+      // window.localStorage.setItem("user", JSON.stringify(response.data.data))
 
       setTimeout(() => {
         setIsLoading(false); // Sembunyikan loading setelah 3 detik
