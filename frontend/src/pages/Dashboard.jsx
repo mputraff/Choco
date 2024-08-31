@@ -43,7 +43,6 @@ export default function Dashboard() {
     }
   }, [authState]);
   console.log(results);
-  
 
   return (
     <>
@@ -78,7 +77,7 @@ export default function Dashboard() {
                       Status gizi: {res.category}
                     </div>
                     <div className="flex justify-end my-auto me-5">
-                      <i className="fa-arrow-circle-right"></i>
+                      <i className="fa-solid fa-angle-right ml-2"></i>
                     </div>
                   </div>
                 </Link>

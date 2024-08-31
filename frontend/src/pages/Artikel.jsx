@@ -7,7 +7,8 @@ import PictArtikel1 from "../assets/img/artikel_1.jpg";
 import PictArtikel2 from "../assets/img/artikel_2.jpg";
 import PictArtikel4 from "../assets/img/artikel_4.jpg";
 
-const articles = [
+// eslint-disable-next-line react-refresh/only-export-components
+export const articles = [
   { id: 1, 
     title: "Ada 4,8 Juta Ibu Hamil Per Tahun", 
     content: `"Ibu-ibu hamil ini, jumlahnya 4,8 juta per tahun.`,
