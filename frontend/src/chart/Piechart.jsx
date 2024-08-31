@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 import React, { PureComponent } from 'react';
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
 import { useMediaQuery } from 'react-responsive';
 
 export default function Piechart({ dataset }) {
