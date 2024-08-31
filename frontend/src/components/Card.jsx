@@ -1,7 +1,7 @@
 export default function Card({ color, ml, mt, mb, mr }) {
   return (
     <div
-      className={`w-full max-sm:ml-0 max-sm:mr-0 max-sm:w-10/12 h-44 ${color} ${ml} ${mt} ${mb} ${mr} rounded-xl flex flex-col shadow-[0_3px_10px_rgb(0,0,0,0.2)]`}
+      className={`w-full max-sm:ml-0 max-sm:mr-0 max-sm:w-10/12 max-md:ml-0 max-md:mr-0 max-md:w-10/12 h-44 ${color} ${ml} ${mt} ${mb} ${mr} rounded-xl flex flex-col shadow-[0_3px_10px_rgb(0,0,0,0.2)]`}
     >
       <div className="flex gap-2 items-center mt-5 ">
         {/* img artikel */}

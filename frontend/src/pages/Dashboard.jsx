@@ -53,12 +53,12 @@ export default function Dashboard() {
           <h3 className="flex mt-10 w-full justify-center text-white text-3xl font-semibold">
             INFO GIZI DI INDONESIA
           </h3>
-          <article className="flex w-8/12 justify-between h-auto">
-            <div className="w-96 h-80 flex">
+          <article className="flex w-8/12 max-lg:w-9/12 max-md:w-9/12 max-sm:w-9/12 justify-between h-auto">
+            <div className="w-96 h-80 flex max-md:h-60 max-md:w-60 max-sm:h-52 max-sm:w-52">
               <img src={ImgDashboard1} alt="" />
             </div>
 
-            <div className="w-90 h-80 flex">
+            <div className="w-90 h-80 flex max-md:h-60 max-md:w-60 max-sm:h-52 max-sm:w-52">
               <img src={ImgDashboard2} alt="" />
             </div>
           </article>

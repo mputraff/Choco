@@ -11,7 +11,7 @@ export default function Search({onSearch}) {
 
   return (
     <>
-      <div className="w-1/4 m-10 h-10 flex items-center border-2 rounded-2xl">
+      <div className="w-1/4 max-sm:w-2/4 m-10 h-10 flex items-center border-2 rounded-2xl">
         <i className="fa-solid fa-magnifying-glass ml-4"></i>
         <input
           className="bg-transparent outline-none ml-2 w-5/6"
