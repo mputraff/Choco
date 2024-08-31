@@ -1,13 +1,17 @@
+/* eslint-disable react/prop-types */
+import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 import React, { PureComponent } from 'react';
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
 import { useMediaQuery } from 'react-responsive';
 
-export default function Piechart() {
+export default function Piechart({ dataset }) {
+    console.log(dataset);
+    
     const data = [
-        { name: "Gizi Buruk", value: 200 },
-        { name: "Gizi Kurang", value: 700 },
-        { name: "Gizi Baik", value: 400 },
-        { name: "Gizi Lebih", value: 500 },
+        { name: "Gizi Buruk", value: dataset.gizi_buruk },
+        { name: "Gizi Kurang", value: dataset.gizi_kurang },
+        { name: "Gizi Baik", value: dataset.gizi_baik },
+        { name: "Gizi Lebih", value: dataset.gizi_lebih },
     ];
 
     const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { differenceInMonths, parseISO } from "date-fns";
+import { Link } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -42,6 +42,8 @@ export default function Dashboard() {
       getAnthropromerties();
     }
   }, [authState]);
+  console.log(results);
+  
 
   return (
     <>
@@ -64,18 +66,22 @@ export default function Dashboard() {
             <h3 className="text-3xl ml-5 font-semibold">Data Anak Anda</h3>
             <div className="flex flex-col w-full h-auto bg-slate-300 rounded-lg">
               {results.map((res) => (
-                <div className="grid grid-cols-4 my-10" key={res.id}>
-                  <div className="col-span-2 ms-5">
-                    <p className="font-semibold text-xl">{res.name}</p>
-                    <p className="text-lg">Umur : {res.ageInMonths} Bulan</p>
-                    <p className="text-lg">BB: {res.weight} Kg</p>
-                    <p className="text-lg">TB: {res.height} cm</p>
+                <Link to={`/hasil-antropometri/${res.id}`} key={res.id}>
+                  <div className="grid grid-cols-4 my-10">
+                    <div className="col-span-2 ms-5">
+                      <p className="font-semibold text-xl">{res.name}</p>
+                      <p className="text-lg">Umur : {res.ageInMonths} Bulan</p>
+                      <p className="text-lg">BB: {res.weight} Kg</p>
+                      <p className="text-lg">TB: {res.height} cm</p>
+                    </div>
+                    <div className="col content-center">
+                      Status gizi: {res.category}
+                    </div>
+                    <div className="flex justify-end my-auto me-5">
+                      <i className="fa-arrow-circle-right"></i>
+                    </div>
                   </div>
-                  <div className="col content-center">Status gizi: {res.category}</div>
-                  <div className="flex justify-end my-auto me-5">
-                    <i className="fa-arrow-circle-right"></i>
-                  </div>
-                </div>
+                </Link>
               ))}
             </div>
           </article>
