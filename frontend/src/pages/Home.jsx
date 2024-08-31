@@ -87,7 +87,7 @@ export default function Home() {
             Artikel Terkini
           </h2>
           {/* Card */}
-          <div className="py-10 w-full flex gap-10 2xl:h-72 max-sm:h-auto max-md:h-auto items-center bg-slate-600 max-sm:flex-col max-sm:items-center max-md:flex-col max-md:items-center ">
+          <div className="py-10 w-full flex gap-10 2xl:h-72 max-sm:h-auto max-md:h-auto items-center bg-slate-500 max-sm:flex-col max-sm:items-center max-md:flex-col max-md:items-center ">
             {articles.map((article) => (
               <Card
                 key={article.id}
@@ -95,7 +95,7 @@ export default function Home() {
                 link={article.href}
                 image={article.image}
                 content={article.content}
-                color="bg-slate-500"
+                color="bg-slate-300"
                 ml={"ml-8"}
                 mt={"max-sm:mt-8"}
                 mb={"max-md:mt-8"}
