@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, Space } from "antd";
+import Logo from "../assets/img/logo.png";
 
 export default function Navbar() {
   const [dropdown, setDropdown] = useState(false);
@@ -66,9 +67,8 @@ export default function Navbar() {
   return (
     <header className="w-full h-16 bg-slate-700">
       <nav className="w-full h-full flex items-center justify-between">
-        <div className="flex gap-4 ml-10 text-white">
-          <h3>Logo</h3>
-          <h3>nama apk</h3>
+        <div className="flex ml-10 text-white">
+          <img src={Logo} alt="" className="w-36"/>
         </div>
         <div className="flex mr-6 items-center">
           <ul className="flex items-center gap-5 mr-6 text-white max-sm:hidden">

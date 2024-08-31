@@ -7,6 +7,7 @@ import Button from "../components/Button.jsx";
 import Input from "../components/Input.jsx";
 import ButtonSign from "../components/ButtonSign.jsx";
 import Loading from "../components/Loading"; // Import Loading
+import Logo from "../assets/img/logo.png";
 
 import { useAuth } from "../hooks/useAuth.jsx";
 
@@ -19,9 +20,9 @@ export default function Login() {
   const [isLoading, setIsLoading] = useState(false); // State untuk Loading
 
   const { login } = useAuth();
-  
+
   const navigate = useNavigate();
-  
+
   const handleClickSignInorSignUp = (name) => {
     setSignInOrSignUp(name);
   };
@@ -60,7 +61,7 @@ export default function Login() {
       // console.log(response.data.data);
 
       login(response.data.data);
-    
+
       setIsLoading(true); // Tampilkan loading saat login berhasil
 
       // window.localStorage.setItem("user", JSON.stringify(response.data.data))
@@ -85,9 +86,8 @@ export default function Login() {
       {!isLoading && (
         <div className="container-login h-screen w-full">
           <nav className="bg-white w-full h-16 justify-between flex items-center p-6 text-black border-b border-black">
-            <div className="flex gap-5">
-              <h3>Logo</h3>
-              <h2>Nama apk</h2>
+            <div className="flex ml-10 text-white">
+              <img src={Logo} alt="" className="w-36" />
             </div>
             <Link to={"/"} className="bg-indigo-400 px-6 py-1 border-white rounded-xl">
               Back
@@ -130,8 +130,8 @@ export default function Login() {
                     onChange={(e) => setPassword(e.target.value)}
                   />
                   <button className="w-full text-sm mt-2">Lupa Password?</button>
-                  
-                  <ButtonSign child="Sign In" width={"w-full"}  type={"submit"}/>
+
+                  <ButtonSign child="Sign In" width={"w-full"} type={"submit"} />
                 </form>
               )}
 
@@ -178,7 +178,7 @@ export default function Login() {
                     onChange={(e) => setPassword(e.target.value)}
                   />
                   <br />
-                  <ButtonSign child="Sign Up" width={"w-full"} type={"submit"}/>
+                  <ButtonSign child="Sign Up" width={"w-full"} type={"submit"} />
                 </form>
               )}
             </div>
