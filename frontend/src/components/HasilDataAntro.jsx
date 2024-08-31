@@ -1,10 +1,17 @@
+/* eslint-disable react/prop-types */
 import Solusi from "../components/SolusiDataAntro";
 import GrafikAntropometri from "../components/GrafikAntropometri";
 import Bayi from "../assets/img/Bayi.png";
 import Chart from "../chart/Piechart";
 import TabelStandar from "./TabelStandar";
 
-export default function HasilDataAntro() {
+export default function HasilDataAntro({ data }) {
+  if (!data) {
+    return <p>No data available.</p>;
+  }
+
+  // console.log(data);
+
   return (
     <div className="h-auto flex bg-slate-300 mx-10 rounded-xl my-10">
       <div className="w-full m-10 flex flex-col">
@@ -17,13 +24,13 @@ export default function HasilDataAntro() {
         <div className="w-full h-auto flex items-center">
           <article className="flex flex-col w-full h-full items-center gap-16 mt-24">
             <div className="flex w-8/12 h-96 items-center justify-center">
-              <Chart />
+              <Chart dataset={data.data_gizi} />
             </div>
             <div className=" w-1/3 h-auto flex flex-col gap-5">
-              <GrafikAntropometri kategori={"Nama Anak"} data={"Citra"} />
-              <GrafikAntropometri kategori={"Berat Badan"} data={"13 Kg"} />
-              <GrafikAntropometri kategori={"Tinggi Badan"} data={"109 cm"} />
-              <GrafikAntropometri kategori={"Umur"} data={"7 Tahun"} />
+              <GrafikAntropometri kategori={"Nama Anak"} data={data.name} />
+              <GrafikAntropometri kategori={"Berat Badan"} data={`${data.weight} kg`} />
+              <GrafikAntropometri kategori={"Tinggi Badan"} data={`${data.height} cm`} />
+              <GrafikAntropometri kategori={"Umur"} data={`${data.age} Bulan`} />
             </div>
 
             <div className="flex flex-col w-8/12 h-96 ">

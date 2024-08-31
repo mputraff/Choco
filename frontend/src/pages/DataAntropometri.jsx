@@ -9,7 +9,7 @@ import axios from "axios";
 import { useAuth } from "../hooks/useAuth";
 
 export default function DataAntropometri() {
-  const [hasilData, setHasilData] = useState(false);
+  const [hasilData, setHasilData] = useState(true);
   const { authState } = useAuth();
 
   const [formData, setFormData] = useState({
