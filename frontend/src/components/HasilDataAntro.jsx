@@ -19,7 +19,7 @@ export default function HasilDataAntro() {
             <div className="flex w-8/12 h-96 items-center justify-center">
               <Chart />
             </div>
-            <div className=" w-1/3 h-auto flex flex-col gap-5">
+            <div className="w-1/3 h-auto flex flex-col gap-5 max-md:w-9/12 max-sm:w-9/12 ">
               <GrafikAntropometri kategori={"Nama Anak"} data={"Citra"} />
               <GrafikAntropometri kategori={"Berat Badan"} data={"13 Kg"} />
               <GrafikAntropometri kategori={"Tinggi Badan"} data={"109 cm"} />
