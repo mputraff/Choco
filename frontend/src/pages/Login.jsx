@@ -75,8 +75,6 @@ export default function Login() {
     }
   };
 
-  
-
   return (
     <>
       {isLoading && (
@@ -97,13 +95,13 @@ export default function Login() {
           </nav>
 
           <div className="box-login w-full flex h-screen bg-slate-800 justify-center items-center">
-            <div className="form-login w-1/2 flex flex-col justify-center text-white items-center max-sm:w-2/3">
+            <div className="form-login w-1/2 flex flex-col justify-center text-white items-center max-lg:w-2/4">
               {SignInOrSignUp === "Sign In" && (
-                <h3 className="text-3xl  max-sm:flex ">Silahkan Login Akun!</h3>
+                <h3 className="text-3xl  max-lg:flex max-sm:text-2xl">Silahkan Login Akun!</h3>
               )}
 
               {SignInOrSignUp === "Sign Up" && (
-                <h3 className="text-3xl">Silahkan Daftar Akun!</h3>
+                <h3 className="text-3xl max-sm:text-2xl">Silahkan Daftar Akun!</h3>
               )}
               <div className="Sign flex gap-8 mt-4 mb-3">
                 <Button
@@ -116,7 +114,7 @@ export default function Login() {
                 />
               </div>
               {SignInOrSignUp === "Sign In" && (
-                <form onSubmit={handleSignIn} className="SignIn w-1/2 text-center max-sm:w-full">
+                <form onSubmit={handleSignIn} className="SignIn w-1/2 text-center max-lg:w-full">
                   <Input
                     type="email"
                     icon="fa-solid fa-envelope"
@@ -138,7 +136,7 @@ export default function Login() {
               )}
 
               {SignInOrSignUp === "Sign Up" && (
-                <form onSubmit={handleSignUp} className="SignUp w-1/2 max-sm:w-full ">
+                <form onSubmit={handleSignUp} className="SignUp w-1/2 max-lg:w-full ">
                   <label htmlFor="" className="ml-4">
                     Nama Lengkap
                   </label>
@@ -185,7 +183,7 @@ export default function Login() {
               )}
             </div>
 
-            <div className="img-login h-4/6 flex max-sm:hidden">
+            <div className="img-login h-4/6 flex max-lg:hidden">
               <img className="" src={loginImg} alt="" />
             </div>
           </div>

@@ -40,9 +40,9 @@ export default function Home() {
         </div>      
       </section>
 
-      <section className="w-full h-svh">
+      <section className="w-full h-svh max-md:h-auto">
         <div className="flex flex-col items-center gap-4 justify-center h-full bg-slate-600">
-          <h3 className="text-3xl font-semibold w-2/4 text-center text-white ">Tabel Standar Pertumbuhan Anak Berdasarkan Usia (0-2 Tahun)</h3>
+          <h3 className="text-3xl font-semibold w-2/4 text-center text-white max-md:text-xl max-md:mt-8">Tabel Standar Pertumbuhan Anak Berdasarkan Usia (0-2 Tahun)</h3>
           <DataBayi />
         </div>
       </section>

@@ -139,7 +139,6 @@ export default function Navbar() {
             {dropdown && (
               <ul className="bg-slate-700 absolute max-sm:top-20 max-sm:w-full max-sm:p-2 max-sm:px-14 text-base max-sm:left-0 text-white flex flex-col gap-2 shadow-[7px_12px_11px_0px_#00000024]">
                 <Link to={"/data-antropometri"}>Data Antropometri</Link>
-              
                 <Link to={"/data-kehamilan"}>Data Kehamilan</Link>
               </ul>
             )}

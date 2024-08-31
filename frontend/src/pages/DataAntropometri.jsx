@@ -163,6 +163,7 @@ export default function DataAntropometri() {
                   <Button
                     child="Cek"
                     width="w-1/6"
+                    md={"max-lg:w-2/3"}
                     onClick={handleClickHasilData}
                   />
                 </form>

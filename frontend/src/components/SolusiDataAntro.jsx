@@ -3,15 +3,15 @@ export default function SolusiDataAntro() {
     <div className="flex flex-col w-11/12 mx-10 h-auto">
       <p className="font-semibold text-xl ml-4">Solusi</p>
       <div className="w-full border border-gray-400 rounded-lg h-64 bg-gray-200 flex mt-2">
-        <div className="flex flex-col m-4 text-justify font-semibold overflow-auto">
-          <p className="mb-4">
+        <div className="flex flex-col m-4 text-justify font-semibold overflow-auto ">
+          <p className="mb-4 max-sm:text-base max-sm:mx-3">
             Untuk mengatasi masalah gizi buruk pada anak usia 7
             tahun membutuhkan pendekatan holistik yang mencakup
             peningkatan asupan kalori dan nutrisi seimbang. Berikut
             adalah poin-poin utama yang perlu diperhatikan.
           </p>
-          <p>1. Perbanyak Kalori dan Karbohidrat</p>
-          <ul className="list-disc ml-9">
+          <p className="max-sm:text-base max-sm:mx-3">1. Perbanyak Kalori dan Karbohidrat</p>
+          <ul className="list-disc ml-9 ">
             <li>
               Makanan Sumber Karbohidrat: Nasi, roti gandum,
               kentang, pasta, dan jagung.
@@ -21,7 +21,7 @@ export default function SolusiDataAntro() {
               sering sepanjang hari, termasuk camilan sehat.
             </li>
           </ul>
-          <p>1. Perbanyak Kalori dan Karbohidrat</p>
+          <p className="max-sm:text-base max-sm:mx-3">1. Perbanyak Kalori dan Karbohidrat</p>
           <ul className="list-disc ml-9">
             <li>
               Makanan Sumber Karbohidrat: Nasi, roti gandum,

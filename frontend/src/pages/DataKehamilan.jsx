@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import imgIbuHamil from "../assets/img/IbuHamil.png";
 import imgIbuMenyusui from "../assets/img/IbuMenyusui.png";
 import imgDataHamil from "../assets/img/image.png";
+import imgDataMenyusui from "../assets/img/DataMenyusui.png";
 import TabelKehamilan from "../components/TabelKehamilan";
 import TabelMenyusui from "../components/TabelMenyusui";
 import GambarKet1 from "../assets/img/Ket_1.png";
@@ -23,29 +24,37 @@ export default function DataKehamilan() {
         <div className="w-full flex h-full flex-col">
           <h3 className="mx-20 my-10 text-2xl max-sm:text-center text-white font-semibold">KEBUTUHAN GIZI</h3>
           {/* Ibu Menyusui */}
-          <div className="h-1/2 flex mx-10 gap-3 mt-5 items-center max-sm:flex-col">
+          <div className="h-1/2 flex mx-10 gap-3 mt-5 items-center max-sm:flex-col max-md:flex-col justify-center">
             {/* img */}
             <div className="flex  flex-col gap-3 text-center text-white justify-center">
-              <img src={imgIbuHamil} alt="imgIbuMenyusui" className="max-sm:w-60" />
+              <img src={imgIbuHamil} alt="imgIbuMenyusui" className="max-sm:w-full max-md:w-full" />
               <p className="font-semibold text-xl ">Ibu Hamil</p>
             </div>
             {/* table */}
-            <div className="flex w-10/12 h-80 max-sm:w-full">
-              <TabelKehamilan />
+            <div className="flex w-10/12 h-80 max-sm:w-full max-md:w-full">
+              {/* ketika max-sm && max-md dia memakai <img src={imgDataHamil} alt="" className=""/> */}
+              <img src={imgDataHamil} alt="" className="lock max-sm:block max-md:block lg:hidden"/>
+              <div className="hidden lg:flex w-full">
+                <TabelKehamilan />
+              </div>
+              
             </div>
           </div>
 
 
           {/* Ibu Menyusui */}
-          <div className="h-1/2 flex mx-10 gap-3 items-center my-20 ">
+          <div className="h-1/2 flex mx-10 gap-3 items-center my-20 max-sm:flex-col max-md:flex-col">
             {/* img */}
-            <div className="flex flex-col text-center text-white  justify-center">
+            <div className="flex flex-col text-center text-white justify-center">
               <img src={imgIbuMenyusui} alt="imgIbuMenyusui" />
               <p className="font-semibold text-xl">Ibu Menyusui</p>
             </div>
             {/* table */}
             <div className="flex w-10/12 h-80">
+            <img src={imgDataMenyusui} alt="" className="lock max-sm:block max-md:block lg:hidden"/>
+              <div className="hidden lg:flex w-full">
               <TabelMenyusui />
+              </div>
             </div>
           </div>
 

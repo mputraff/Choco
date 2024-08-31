@@ -26,11 +26,11 @@ export default function HasilDataAntro() {
               <GrafikAntropometri kategori={"Umur"} data={"7 Tahun"} />
             </div>
 
-            <div className="flex flex-col w-8/12 h-96 ">
+            <div className="flex flex-col w-8/12 h-96 max-sm:w-full max-lg:w-full max-md:w-full max-xl:w-full">
               <h3 className="my-4 mx-6 font-bold text-xl">Tabel Standar</h3>
-              <div className="flex flex-col items-center gap-4 border border-gray-500 rounded-lg h-full">
-                <div className="flex bg-[#8DB0D0] w-full rounded-lg h-12 items-center">
-                  <ul className="flex text-xl font-bold gap-24 ml-6">
+              <div className="flex flex-col items-center gap-4 border border-gray-500 rounded-lg h-full max-lg:w-full">
+                <div className="flex bg-[#8DB0D0] border w-full rounded-lg h-12 items-center">
+                  <ul className="flex text-xl font-bold gap-24 ml-6  max-sm:text-lg max-lg:gap-10 max-xl:gap-24 max-sm:ml-2 max-sm:gap-4 max-md:gap-6 max-[431px]:gap-2 max-[431px]:text-sm max-md:text-lg">
                     <li>BB/U</li>
                     <li>TB/U</li>
                     <li>BB/TB</li>

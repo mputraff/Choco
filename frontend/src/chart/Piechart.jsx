@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Piechart() {
     const data = [
@@ -24,6 +25,8 @@ export default function Piechart() {
         );
     };
 
+    const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' });
+
     return (
         <>
             <ResponsiveContainer width="100%" height="100%">
@@ -34,7 +37,7 @@ export default function Piechart() {
                         cy="50%"
                         labelLine={false}
                         label={renderCustomizedLabel}
-                        outerRadius={190}
+                        outerRadius={isSmallScreen ? 150 : 190}
                         fill="#8884d8"
                         dataKey="value"
                     >
