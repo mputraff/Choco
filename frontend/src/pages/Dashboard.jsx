@@ -18,20 +18,17 @@ export default function Dashboard() {
       if (!token) return;
 
       const response = await axios.get(
-        "https://api-web-stunting.up.railway.app/api/v1/anthropometry",
+        "https://api-web-stunting.up.railway.app/api/v1/anthropometry/result",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
 
       if (response.status === 200) {
-        // Urutkan data berdasarkan created_at
-        const sortedData = response.data.data.sort(
-          (a, b) => new Date(b.created_at) - new Date(a.created_at)
-        );
+        console.log(response.data.data);
 
         // Set data yang sudah diurutkan ke state
-        setResults(sortedData);
+        setResults(response.data.data);
       } else {
         throw new Error(`Unexpected response status: ${response.status}`);
       }
@@ -40,22 +37,11 @@ export default function Dashboard() {
     }
   };
 
-  const ageInMonth = (birthDate, measurementDate) => {
-    const birth = parseISO(birthDate);
-    const measurement = parseISO(measurementDate);
-
-    const ageInMonths = differenceInMonths(birth, measurement);
-
-    return Math.abs(ageInMonths);
-  };
-
   useEffect(() => {
     if (authState.token) {
       getAnthropromerties();
     }
   }, [authState]);
-
-  console.log(results);
 
   return (
     <>
@@ -81,11 +67,11 @@ export default function Dashboard() {
                 <div className="grid grid-cols-4 my-10" key={res.id}>
                   <div className="col-span-2 ms-5">
                     <p className="font-semibold text-xl">{res.name}</p>
-                    <p className="text-lg">Umur : {ageInMonth(res.birth_date, res.measurement_date)} Bulan</p>
+                    <p className="text-lg">Umur : {res.ageInMonths} Bulan</p>
                     <p className="text-lg">BB: {res.weight} Kg</p>
                     <p className="text-lg">TB: {res.height} cm</p>
                   </div>
-                  <div className="col content-center">Status gizi: Kurang</div>
+                  <div className="col content-center">Status gizi: {res.category}</div>
                   <div className="flex justify-end my-auto me-5">
                     <i className="fa-arrow-circle-right"></i>
                   </div>
