@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Artikel from "./pages/Artikel";
 import Profile from "./pages/Profile";
 import DataAntropometri from "./pages/DataAntropometri";
+import HasilAntropometri from "./pages/HasilAntropometri";
 import DataKehamilan from "./pages/DataKehamilan";
 import DataBayi from "./pages/DataBayi";
 import Dashboard from "./pages/Dashboard";
@@ -21,6 +22,7 @@ function App() {
           <Route path="/artikel" element={<Artikel />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/data-antropometri" element={<DataAntropometri />} />
+          <Route path="/hasil-antropometri/:id" element={<HasilAntropometri />} />
           <Route path="/data-kehamilan" element={<DataKehamilan />} />
           <Route path="/data-bayi" element={<DataBayi />} />
         </Routes>
