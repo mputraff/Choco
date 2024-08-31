@@ -10,25 +10,25 @@ import PictArtikel4 from "../assets/img/artikel_4.jpg";
 const articles = [
   { id: 1, 
     title: "Ada 4,8 Juta Ibu Hamil Per Tahun", 
-    content: `"Ibu-ibu hamil ini, jumlahnya 4,8 juta per tahun. Kalau kita biarkan ada sekitar 21 persen atau 20 persennya melahirkan anak stunting. Sehingga 20 persen dari 4,8 juta itu kira-kira 1,2 juta kurang lebih (stunting),"`,
+    content: `"Ibu-ibu hamil ini, jumlahnya 4,8 juta per tahun.`,
     image: PictArtikel1,
     href: "https://nasional.kompas.com/read/2023/10/24/15275871/ada-48-juta-ibu-hamil-per-tahun-kepala-bkkbn-kalau-dibiarkan-ada-20-persen"
   },
   { id: 2, 
     title: "Ibu Perlu Tahu Berat Badan Ideal sesuai Usia Bayi", 
-    content: "Berat badan ideal bayi wajib dipantau setiap bulannya untuk memastikan ia tumbuh dengan baik. Bayi yang memiliki berat badan di bawah standar bisa mengindikasikan gizi yang tidak adekuat dan jika dibiarkan dapat berkembang menjadi stunting.",
+    content: "Berat badan ideal bayi wajib dipantau setiap bulannya",
     image: PictArtikel2,
     href: "https://www.halodoc.com/artikel/ibu-perlu-tahu-berat-badan-ideal-sesuai-usia-bayi"
   },
   { id: 3, 
-    title: "CEGAH STUNTING !! IBU HAMIL WAJIB KONSUMSI PROTEIN HEWANI", 
-    content: "Dengan mendapatkan gizi seimbang, ibu dan janin yang dikandung akan terhindar dari risiko kesehatan yang juga mempengaruhi kulaitas hidup generasi selanjutnya. Seiring proses kehamilan, kebutuhan gizi pun akan terus meningkat.",
+    title: "CEGAH STUNTING !! Ibu hamil wajib konsumsi protein hewani", 
+    content: "Dengan mendapatkan gizi seimbang",
     image: PictArtikel1,
     href: "https://diskes.badungkab.go.id/artikel/47972-cegah-stunting-ibu-hamil-wajib-konsumsi-protein-hewani#:~:text=Calon%20ibu%20yang%20kurang%20asupan,Stunting%20(anak%20tumbuh%20pendek)"  
   },
   { id: 4, 
     title: "Ketahui Masalah Stunting dan Cara Mengatasi Stunting", 
-    content: "Stunting menjadi salah satu problem kesehatan yang masih menggejala di Indonesia. Masalah stunting bahkan menjadi perhatian khusus Kementerian Kesehatan lewat sejumlah kampanyenya.",
+    content: "Stunting menjadi salah satu problem kesehatan ",
     image: PictArtikel4,
     href: "https://www.nestlehealthscience.co.id/artikel/masalah-stunting-anak"
   },

@@ -5,7 +5,7 @@ export default function Footer() {
       <div className="w-full h-full flex gap-28 max-sm:flex-col max-sm:gap-0">
         {/* address */}
         <div className="flex flex-col w-1/4 ml-10 gap-5 mt-7 max-sm:w-2/3">
-          <h2 className="text-2xl font-semibold w-full ">Address</h2>
+          <h2 className="text-2xl font-semibold w-full ">Information</h2>
           <p className="text-justify">
             Jl. A.H. Nasution No.105, Cipadung Wetan, Kec. Cibiru, Kota Bandung,
             Jawa Barat 40614

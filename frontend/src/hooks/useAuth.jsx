@@ -32,11 +32,10 @@ export const AuthProvider = ({ children }) => {
 
   const fetchUserInfo = async () => {
     try {
-      const { token } = authState;
-      if (!token) return;
+      if (!authState || !authState.token) return;
 
       const response = await axios.get("https://api-web-stunting.up.railway.app/api/v1/auth", {
-        headers: { Authorization: `Bearer ${token}` },
+        headers: { Authorization: `Bearer ${authState.token}` },
       });
 
       if (response.status === 200) {
@@ -45,7 +44,7 @@ export const AuthProvider = ({ children }) => {
         throw new Error(`Unexpected response status: ${response.status}`);
       }
     } catch (error) {
-      if (error.response.status === 401) {
+      if (error.response?.status === 401) {
         localStorage.removeItem("authState");
         window.location.href = "/login";
       }
@@ -57,8 +56,9 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+
   useEffect(() => {
-    if (authState.token) {
+    if (authState && authState.token) {
       fetchUserInfo(); // Fetch user info on login
     }
   }, [authState]);
@@ -71,7 +71,7 @@ export const AuthProvider = ({ children }) => {
       userInfo,
       authState
     }),
-    [user]
+    [user, authState, userInfo]
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

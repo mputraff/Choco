@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import imgIbuHamil from "../assets/img/IbuHamil.png";
 import imgIbuMenyusui from "../assets/img/IbuMenyusui.png";
+import imgDataHamil from "../assets/img/image.png";
 import TabelKehamilan from "../components/TabelKehamilan";
 import TabelMenyusui from "../components/TabelMenyusui";
 import GambarKet1 from "../assets/img/Ket_1.png";
@@ -51,7 +52,7 @@ export default function DataKehamilan() {
           <div className="my-14 flex flex-col w-full items-center h-1/2">
             <h2 className="text-3xl flex w-9/12 ml-5 text-white font-semibold">Keterangan</h2>
 
-            <div className="flex w-10/12  gap-36 justify-center h-auto mt-10">
+            <div className="flex w-10/12 h-auto mt-10 justify-center flex-wrap">
               <Keterangan
                 image={GambarKet1}
                 alt="GambarKet1"
@@ -77,9 +78,14 @@ export default function DataKehamilan() {
                 alt="GambarKet3"
                 p1="60 gram tomat (10mg Vit C)"
               />
-            </div>
 
-            <div className="flex w-10/12 gap-36  justify-center h-auto mt-10">
+              <Keterangan
+                image={GambarKet5}
+                alt="GambarKet1"
+                p1="75 gram hati ayam"
+                p2="(8.25 mg zat besi)"
+              />
+
               <Keterangan
                 image={GambarKet5}
                 alt="GambarKet1"
@@ -101,12 +107,6 @@ export default function DataKehamilan() {
                 p2="(0.3 gram omega 3)"
               />
 
-              <Keterangan
-                image={GambarKet8}
-                alt="GambarKet3"
-                p1="22 gram kacang kenari"
-                p2="(2 gram omega 6)"
-              />
             </div>
 
           </div>
